@@ -12,6 +12,7 @@ sh -c "$(curl -fsSL https://raw.githubusercontent.com/ohmyzsh/ohmyzsh/master/too
 git clone --depth=1 https://github.com/romkatv/powerlevel10k.git ${ZSH_CUSTOM:-$HOME/.oh-my-zsh/custom}/themes/powerlevel10k
 ### Install fonts for Powerlevel10k.
 sudo apt-get install fonts-powerline
+
 wget https://github.com/ryanoasis/nerd-fonts/releases/download/v3.0.2/Meslo.zip &&
 unzip Meslo.zip -d Meslo && sudo cp -r Meslo /usr/share/fonts
 ### Set Zsh theme
@@ -26,8 +27,7 @@ git clone https://github.com/zsh-users/zsh-autosuggestions.git $ZSH_CUSTOM/plugi
 ### Syntax Higlighting
 git clone https://github.com/zsh-users/zsh-syntax-highlighting.git $ZSH_CUSTOM/plugins/zsh-syntax-highlighting
 ### Autojump
-git clone https://github.com/wting/autojump.git
-cd autojump && python3 ./install.py
+git clone https://github.com/wting/autojump.git && cd autojump && python3 ./install.py
 (also dont forget to add terminal output to bashrc file.)
 ### Add plugins
 nano ~/.zshrc
@@ -36,8 +36,7 @@ plugins=(git zsh-autosuggestions zsh-syntax-highlighting autojump)
 ### Load to configuration
 source ~/.zshrc
 ### Install dark theme for Terminator
-git clone https://github.com/dracula/terminator.git
-cd terminator && ./install.sh
+git clone https://github.com/dracula/terminator.git && cd terminator && ./install.sh
 ### Change terminal font to MesloLGS Nerd Font Regular
 ### For more plugins, you can check Oh-My-Zsh's github page
 https://github.com/ohmyzsh/ohmyzsh
